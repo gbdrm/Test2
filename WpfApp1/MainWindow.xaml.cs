@@ -24,5 +24,21 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            grid1.Visibility = Visibility.Hidden;
+            grid2.Visibility = Visibility.Visible;
+            button1.IsEnabled = true;
+            button2.IsEnabled = false;
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            grid1.Visibility = Visibility.Visible;
+            grid2.Visibility = Visibility.Hidden;
+            button1.IsEnabled = false;
+            button2.IsEnabled = true;
+        }
     }
 }
